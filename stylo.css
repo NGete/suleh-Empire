@@ -1,0 +1,178 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #b6b099;
+    color: #030d1f;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: #a3ce23;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav .logo {
+    color: #95a413;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #a4b7cd;
+    text-decoration: none;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #a9a1a1;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #333;
+    color: #dce1cd;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* --- Add this to your suleh/stylo.css file --- */
+
+/* Image Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* You can adjust the max width of the slider */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px; /* Applying the border-radius to the container */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%; /* This is CRUCIAL for the slider to work */
+    flex-shrink: 0;
+    display: block;
+    height: 450px; /* Giving a fixed height to prevent content jumping */
+    object-fit: cover; /* This makes the image cover the area without stretching */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* About Page */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.about-text { flex: 1; }
+.about-image { flex: 1; }
+.about-image img { 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; }
+
+/* Contact Form */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form-section label {
+    margin-top: 1rem;
+}
+
+.contact-form-section input, .contact-form-section textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form-section .error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.contact-form-section button {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Simple responsive nav, could be a hamburger menu */
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+}
